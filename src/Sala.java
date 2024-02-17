@@ -66,8 +66,45 @@ public class Sala {
 
 
 
+    public void planoAsientos() {
+
+        for(int i=0; i<butacas.length; i++) {
+            for(int j=0; j<butacas[i].length; j++) {
+
+                if(butacas[i][j]==null) {
+                    System.out.printf("%3s","O");
+                }else {
+                    System.out.printf("%3s","X");
+                }
+            }
+            System.out.println();
+        }
+
+    }
 
 
+
+    public void reservaEntrada(int fila, int columna, String correo) {
+
+        if((fila >0 && fila <= butacas.length) && (columna >0 && columna <= butacas[0].length)) {
+
+            if(butacas[fila-1][columna-1]==null) {
+
+                butacas[fila-1][columna-1]=correo;
+
+                System.out.println("Entrada reservada con éxito.");
+                setPublico(getPublico()+1);
+            }else {
+
+                System.out.println("Butaca ocupada. Seleccione otra.");
+            }
+
+        }else {
+            System.out.println("Fila o Columna no válida.");
+        }
+
+
+    }
 
 
 
