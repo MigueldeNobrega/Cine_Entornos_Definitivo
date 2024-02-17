@@ -52,7 +52,56 @@ public class Cine {
 
 
 
+    public void verSalas() {
 
+        for(Sala sala : salas) {
+
+            System.out.println("Sala " + sala.getNumI() + ": Pelicula: " + sala.getTitulo().getTitulo() + "\nDuración: " + sala.getTitulo().getDuracion()+" min.\n");
+
+        }
+        System.out.println("Aforo del cine: "+ aforo +". Público hoy: " + Sala.getPublico()+".");
+    }
+
+
+
+
+
+
+
+
+    public void mostrarPlanoAsientos(int numSala) {
+
+        if(numSala >= 1 && numSala <= salas.length) {
+
+            Sala sala = salas[numSala-1];
+            sala.planoAsientos();
+
+        }else {
+
+            System.out.println("Sala no encontrada.");
+        }
+
+    }
+
+
+
+
+
+
+    public void comprarEntrada(int numSala, int fila, int columna, String correo) {
+
+        if(numSala >= 1 && numSala <= salas.length) {
+
+
+            Sala sala = salas[numSala-1];
+
+            sala.reservaEntrada(fila, columna, correo);
+            sala.planoAsientos();
+        }else {
+            System.out.println("Sala no encontrada.");
+        }
+
+    }
 
 
 
