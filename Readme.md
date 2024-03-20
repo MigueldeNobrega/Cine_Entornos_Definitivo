@@ -8,4 +8,3 @@ Cuando se va a hacer la compra, el usuario puede:
 Ver las salas y los datos de sus peliculas (puede haber salas que proyecten la misma pelicula).
 Elegir sala y butaca para reservar.
 Ver la matriz con asientos libres/ocupados de una sala concreta.
-Hola AlejandroHu
